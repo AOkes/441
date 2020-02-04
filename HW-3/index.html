@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Choose Your Own Adventure</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+
+    <body>
+        <div id="firstAnswer">Update Me</div>
+        <div id="secondAnswer">Update Me</div>
+        <div id="finalAnswer">Update Me</div>
+
+        <script>
+            function test()
+            {
+               var firstAnswer = window.prompt("In the dark of night, you hear a knocking on your door, do you open it?");
+               if (firstAnswer == "Yes") {
+                    document.getElementById("firstAnswer").innerHTML = "You decided to open the door, and were greeted by a salesman, wanting to sell you some weird drink.";
+                    var secondAnswer = window.prompt("When you open the door, you see a salesman, " + "and he is offereing you an odd drink for $5, do you accept?");
+                    if(secondAnswer == "No") {
+                        document.getElementById("secondAnswer").innerHTML = "You declined to accept the drink from the salesman, but he became adamant.";
+                        var finalAnswer = window.prompt("The salesman gets a little disgruntled when you decline the drink, and starts to get agitated, do you shut the door in his face?");
+                        if (finalAnswer == "Yes") {
+                            document.getElementById("finalAnswer").innerHTML = "You decided to shut the door in the salesman's face, and go to your bed for the night";
+                        } else {
+                            document.getElementById("finalAnswer").innerHTML = "You don't shut the door in the salesman's face, and he raises the bottle and hits you on the head, maybe you should have taken the hint.";
+                        }
+                    } else {
+                        document.getElementById("secondAnswer").innerHTML = "You accept the drink, and on the spot drink it, immediately passing out, didn't your mother tell you not to accept drinks from strangers?";
+
+                    }
+               } else {
+                    document.getElementById("firstAnswer").innerHTML = "You decided not to answer " + "the door, going back to what you were originally doing. Where is your sense of adventure?";
+               }
+            }
+        </script>
+
+         <button onclick="test()">Start Adventure</button>
+
+    </body>
+</html>

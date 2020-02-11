@@ -1,0 +1,199 @@
+<html>
+    <style>
+        body{
+            background-color: teal;
+        }
+    </style>
+    <script>
+
+        function restartStory()
+        {
+
+        }
+        function getChoice1()
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "Yes")
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/innkeeper.jpg"
+
+                myQuestion.innerHTML = "You chose to go inside the inn, and find the innkeeper. He looks you over and scoffs to himself, 'Look what the cat dragged in, are you staying the night?'";
+            }
+            else if(myChoice === "No")
+            {
+                myQuestion.innerHTML = "You decided to continue on the road, perhaps you will find home soon? (End)";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "Invalid answer";
+            }
+
+        }
+        function getChoice2()
+        {
+            var food = document.getElementById("choice2").value;
+            var myQuestion = document.getElementById("question");
+            if(food === "Yes")
+            {
+                document.getElementById("choice2").style.display="none";
+                document.getElementById("btnSubmit2").style.display="none";
+
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/room.jpg"
+
+                myQuestion.innerHTML = "You agree to get a room, but you don't have any money. The innkeeper makes you a deal, win his game, and you get a room, do you accept his deal?";
+            }
+            else if(food === "No")
+            {
+                myQuestion.innerHTML = "You decline to get a room, and turn and leave the inn, perhaps there is an ice cream parlor nearby? (End)";
+            }
+        }
+
+        function getChoice3()
+        {
+            var myChoice = document.getElementById("choice3").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "Yes")
+            {
+                document.getElementById("choice3").style.display="none";
+                document.getElementById("btnSubmit3").style.display="none";
+
+                document.getElementById("choice4").style.display="block";
+                document.getElementById("btnSubmit4").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/game.jpg"
+
+                myQuestion.innerHTML = "You agree to the innkeeper's deal, he takes out a coin. Before he flips it, he asks 'Heads, or Tails?'.";
+            }
+            else if(myChoice === "No")
+            {
+                myQuestion.innerHTML = "You decline the innkeeper's deal, and he seems disgruntled, 'Be off with you then.' (End)";
+
+            }
+            else
+            {
+                myQuestion.innerHTML = "Invalid answer";
+            }
+
+        }
+
+        function getChoice4()
+        {
+            var coinFlip = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+            var myChoice = document.getElementById("choice4").value;
+            var myQuestion = document.getElementById("question");
+
+            if(coinFlip == 1)
+            {
+                var result = "Heads"
+            }
+            else
+            {
+                var result = "Tails"
+            }
+            if(myChoice === result)
+            {
+                document.getElementById("choice4").style.display="none";
+                document.getElementById("btnSubmit4").style.display="none";
+
+                document.getElementById("choice5").style.display="block";
+                document.getElementById("btnSubmit5").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/cash.jpg"
+
+                myQuestion.innerHTML = "The innkeeper is impressed with you, and asks if you want to try to guess another one, he would throw some cash your way, do you accept?";
+            }
+
+            else
+            {
+                myQuestion.innerHTML = "Looks like you lost, the answer was " + result + ", better be on your way now. (End)";
+            }
+
+        }
+
+        function getChoice5()
+        {
+            var myChoice = document.getElementById("choice5").value;
+            var myQuestion = document.getElementById("question");
+
+            if(myChoice === "Yes")
+            {
+                document.getElementById("choice4").style.display="none";
+                document.getElementById("btnSubmit4").style.display="none";
+
+                document.getElementById("choice5").style.display="block";
+                document.getElementById("btnSubmit5").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/game.jpg"
+                myQuestion.innerHTML = "You accept his offer, and try again, however you lose, the innkeeper asks the same question, 'Do you want to continue?'";
+
+            }
+
+            else
+            {
+                document.getElementById("choice5").style.display="none";
+                document.getElementById("btnSubmit5").style.display="none";
+
+                document.getElementById("congrats").style.display="block";
+
+                document.getElementById("mainImage").src = "imgs/bed.jpg"
+                myQuestion.innerHTML = "You turn him down, and he grins, clearly you made a good choice. You head to your won room, and rest. (True End)";
+            }
+
+        }
+
+        function rewardCongrats()
+        {
+            for(var i = 0; i < 10; i++)
+            {
+                document.write("You Win!!!");
+            }
+        }
+
+    </script>
+    <body>
+
+        <h1>A Strange Game</h1>
+        <br>
+        <img src="imgs/inn.jpg" height="500" width="800" id="mainImage">
+    <div id="question">
+    <br>
+        You are walking down a dirt road, with no destination in mind to go to.
+        <br>
+        You come upon an odd looking inn, it's sign deteriorating and its vacancy sign barely visible.
+        <br>
+        Do you decide to go inside?
+    </div>
+
+        <br>
+        <input type="text" size="30" id="choice" value="Enter Yes or No">
+        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
+
+        <input type="text" size="30" id="choice2" value="Enter Yes or No." style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice3" value="Enter Yes or No."  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice4" value="Enter Heads or Tails" style="display:none">
+        <button id="btnSubmit4" onclick="getChoice4();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice5" value="Enter Yes or No" style="display:none">
+        <button id="btnSubmit5" onclick="getChoice5();" style="display:none">Click to continue</button>
+
+        <button id="congrats" onclick="rewardCongrats();" style="display:none">Click for reward</button>
+
+        <button onClick="window.location.reload();">Restart Story</button>
+    </body>
+
+</html>

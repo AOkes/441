@@ -1,0 +1,2 @@
+#441 HW-7
+In this assignment, I was a bit nervous going into it. Although I did understand that this assignment should be an easy one, my main struggle with Java was always with using the class's efficiently and properly. This came into play with this assignment, as I struggled to figure out how to properly store and use the objects randomly. After some work however, I managed to get the objects to store into an array, as well as get my random button working, which I felt proud of, considering I usually struggle a lot more with using class's, especially the constructor.

@@ -19,7 +19,7 @@ var more_abilities = new Array();
   let random_num = Math.floor(Math.random() * more_abilities.length);
 
           $("#name").text("Name: " + more_abilities[random_num].name);
-          $("#url").text(" Url: " + more_abilities[random_num].mass);
+          $("#url").text(" Url: " + more_abilities[random_num].url);
 
     });
 

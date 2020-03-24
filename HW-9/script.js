@@ -23,9 +23,6 @@ var more_abilities = new Array();
 
     });
 
-    $("#button2").click(function(){
-      $("#show_information").toggle();
-    });
 })
 
 

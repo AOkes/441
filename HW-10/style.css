@@ -1,0 +1,9 @@
+body{
+  background-color: black;
+  color: white;
+}
+
+canvas{
+  border: 10px solid rgb(210, 25, 13);
+  background-color: white;
+}

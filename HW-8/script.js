@@ -14,8 +14,6 @@ function dogs(){
     $('#dog6').delay(1800).fadeOut("slow").fadeIn("slow");
     $('#dog7').delay(2000).fadeOut("slow").fadeIn("slow");
     $('#dog8').delay(2200).fadeOut("slow").fadeIn("slow");
-    $('#dog9').delay(2400).fadeOut("slow").fadeIn("slow");
-    $('#dog10').delay(2600).fadeOut("slow").fadeIn("slow");
 }
 
 //The button starts the slideshow

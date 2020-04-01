@@ -21,7 +21,7 @@ function dogs(){
         $('.dog').hide( function(){
           $('#btn_play').hide( function(){
 
-            $('#title').text("An Omage to my old pet, Templeton...").delay(2000).fadeOut(function(){
+            $('#title').text("An Homage to my old pet, Templeton...").delay(2000).fadeOut(function(){
 
             beginSlideshow();
 

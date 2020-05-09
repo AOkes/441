@@ -1,0 +1,112 @@
+#title{
+    color: white;
+    background-color: gray;
+    font-size: 26px;
+    display: inline-block;
+}
+
+#mainBody{
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: gray;
+  font-size: 18px;
+  width: 1000px;
+  line-height: 2;
+}
+
+h1{
+  padding: 10px;
+  background-color: gray;
+  position: relative;
+  margin: 0;
+}
+
+img{
+  display: block;
+  margin: auto;
+}
+
+button{
+   padding: 10px;
+}
+
+#buttonSelection{
+    display: block;
+    padding: 15px;
+}
+
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size: 20px;
+  z-index: 2;
+  top: -10px;
+  left: -10px;
+  width: 2000px;
+  position: relative;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+footer {
+  color: white;
+  font-size: 16px;
+}
+
+.leftSidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 130px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  left: 0;
+  background-color: gray; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  top: 0;
+  z-index: 1;
+}
+
+.rightSidebar {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 130px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  right: 0;
+  background-color: gray; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  top: 0;
+  z-index: 1;
+}
+
+.bottomLogo {
+  position: fixed;
+  bottom: 0;
+  left: 650px;
+}

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Playing With Blocks</title>
+        <script src="scripts/main.js"></script>
+        <link rel="stylesheet" href="styles/main.css" text="text/css">
+    </head>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="strategies.html">Strategies</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+
+    <div class="leftSidebar">
+    </div>
+    <div class="rightSidebar">
+    </div>
+
+
+    <h1>Welcome To Tetris!</h1>
+    <body onload="initializeArray();">
+        <div id="title"></div>
+        <img src="" id="image" width="200" height="200" style="">
+        <div id="buttonSelection">
+          <button id="btnSubmit" onclick="goBackward();">Previous Piece</button>
+          <button id="btnSubmit" onclick="accessInformation();">Next Piece</button>
+          <button id="btnSubmit" onclick="rotateClockwise();">Rotate Clockwise</button>
+          <button id="btnSubmit" onclick="rotateCounterClockwise();">Rotate Counter Clockwise</button>
+        </div>
+        <div id = "mainBody">
+          On this webpage, you will learn about the wonderfully simple game of Tetris, that has been around since the 1980's, and is one of the best selling games
+          of all time, selling 35,000,000 copies on the Game Boy alone. Many of you will have probably already heard of Tetris, and probably a large amount of
+          you will have also played the game. It's a very simple concept, stacking pieces of various shapes onto a board with the only controls being rotating the
+          pieces, dropping the pieces faster, and in certain iterations, storing a piece for later use. You also must try not to leave any gaps in your
+          stacking. When you fill a horizontal layer, you earn a TETRIS, clearing the pieces on the horizontal row and gaining points. If you hit the top of the
+          screen, the game is over. A extremely simple to understand concept, but a very difficult game to master, especially with the later levels causing the
+          pieces to fall faster and faster.
+      </div>
+      <audio controls loop>
+        <source src="music/tetrisTheme.wav" type="audio/wav">
+          Your browser does not support the audio element.
+      </audio>
+      <footer>Music: Tetris Theme (All Rights Goes to Nintendo)</footer>
+    </body>
+</html>
